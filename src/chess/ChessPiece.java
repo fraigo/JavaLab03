@@ -57,7 +57,7 @@ public abstract class ChessPiece {
 	
 	@Override
 	public int hashCode(){
-		return super.hashCode();
+		return this.level;
 	}
 
 }
