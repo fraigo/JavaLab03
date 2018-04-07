@@ -62,7 +62,7 @@ public class PawnTest {
 	public void testEqualsNewPawn() {
 		Pawn p1=new Pawn();
 		Pawn p2=new Pawn();
-		assertEquals(p1.equals(p2),true);
+		assertTrue(p1.equals(p2));
 	}
 
 	@Test
@@ -70,7 +70,7 @@ public class PawnTest {
 		Pawn p1=new Pawn();
 		Pawn p2=new Pawn();
 		p2.promote(new Queen());
-		assertEquals(p1.equals(p2),false);
+		assertFalse(p1.equals(p2));
 	}
 
 	@Test
@@ -79,7 +79,7 @@ public class PawnTest {
 		p1.promote(new Queen());
 		Pawn p2=new Pawn();
 		p2.promote(new Queen());
-		assertEquals(p1.equals(p2),true);
+		assertTrue(p1.equals(p2));
 	}
 
 	@Test
@@ -88,7 +88,7 @@ public class PawnTest {
 		p1.promote(new Queen());
 		Pawn p2=new Pawn();
 		p2.promote(new Knight());
-		assertEquals(p1.equals(p2),false);
+		assertFalse(p1.equals(p2));
 	}
 
 	@Test
