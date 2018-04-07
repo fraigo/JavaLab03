@@ -1,5 +1,10 @@
 package chess;
 
+/**
+ * Rook Class
+ * @author franciscoigor@gmail.com
+ *
+ */
 public class Rook extends ChessPiece {
 
 	public Rook() {

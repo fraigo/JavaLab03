@@ -1,5 +1,11 @@
 package chess;
 
+
+/**
+ * Pawn Class
+ * @author franciscoigor@gmail.com
+ *
+ */
 public class Pawn extends ChessPiece {
 	
 	private boolean hasBeenPromoted;
@@ -20,7 +26,11 @@ public class Pawn extends ChessPiece {
 		return "Pawn ["+(this.hasBeenPromoted?"Promoted to "+this.newPiece.toString():"Not promoted")+"]";
 	}
 	
-	
+	/**
+	 * Promote a pawn piece to a different piece.
+	 * It cannot be another <code>Pawn</code> or a <code>King</code>
+	 * @param newPiece
+	 */
 	public void promote(ChessPiece newPiece){
 		if(this.hasBeenPromoted){
 			System.out.println("This piece has been promoted yet ("+newPiece.toString()+")");
@@ -32,6 +42,10 @@ public class Pawn extends ChessPiece {
 		}
 	}
 	
+	/**
+	 * Gets the promoted piece associated to the pawn
+	 * @return A promoted piece, or null if it's not promoted
+	 */
 	public ChessPiece getNewPiece() {
 		return newPiece;
 	}

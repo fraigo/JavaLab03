@@ -1,5 +1,11 @@
 package chess;
 
+
+/**
+ * Knight Class
+ * @author franciscoigor@gmail.com
+ *
+ */
 public class Knight extends ChessPiece {
 
 	public Knight() {

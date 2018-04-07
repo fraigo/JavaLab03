@@ -1,5 +1,10 @@
 package chess;
 
+/**
+ * Bishop Class
+ * @author franciscoigor@gmail.com
+ *
+ */
 public class Bishop extends ChessPiece {
 
 	public Bishop() {

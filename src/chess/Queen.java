@@ -1,5 +1,10 @@
 package chess;
 
+/**
+ * Queen Class
+ * @author franciscoigor@gmail.com
+ *
+ */
 public class Queen extends ChessPiece {
 
 	public Queen() {
