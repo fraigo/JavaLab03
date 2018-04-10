@@ -8,9 +8,18 @@ package chess;
  */
 public class Pawn extends ChessPiece {
 	
+	/**
+	 * Indicator for promoted piece
+	 */
 	private boolean hasBeenPromoted;
+	/**
+	 * Reference to a promoted piece
+	 */
 	private ChessPiece newPiece;
 
+	/**
+	 * Default constructor
+	 */
 	public Pawn() {
 		super(1);
 		hasBeenPromoted=false;

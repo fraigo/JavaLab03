@@ -7,6 +7,9 @@ package chess;
  */
 public class Queen extends ChessPiece {
 
+	/**
+	 * Default constructor
+	 */
 	public Queen() {
 		super(9);
 	}
