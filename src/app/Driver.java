@@ -1,4 +1,4 @@
-package tests;
+package app;
 
 import chess.Bishop;
 import chess.ChessPiece;
@@ -9,13 +9,13 @@ import chess.Queen;
 import chess.Rook;
 
 
-public class ChessTest {
+public class Driver {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		
+		//tests each piece with the same test steps
 		testPiece(new Pawn(),new Pawn());
 		testPiece(new Knight(),new Knight());
 		testPiece(new Bishop(),new Bishop());
@@ -24,38 +24,42 @@ public class ChessTest {
 		testPiece(new King(),new King());
 				
 	}
-	
-	private static void testPiece(ChessPiece p, ChessPiece compareTo){
+	/**
+	 * To make several tests for a single ChessPiece
+	 * @param piece
+	 * @param compareTo
+	 */
+	private static void testPiece(ChessPiece piece, ChessPiece compareTo){
 		
 		
 		System.out.println("========== TEST ==========");
 		System.out.println("*** Testing toString() ***");
-		System.out.println(p.toString());
+		System.out.println(piece.toString());
 
 		System.out.println("*** Testing getLevel() ***");
-		System.out.println(p.getLevel());
+		System.out.println(piece.getLevel());
 
 		System.out.println("*** Testing move() ***");
-		p.move();
+		piece.move();
 		
 		System.out.println("*** Testing equals() to another same Piece ("+compareTo.toString()+") ***");
-		System.out.println(p.equals(compareTo));
+		System.out.println(piece.equals(compareTo));
 
 		Pawn newPawn=new Pawn();
 		System.out.println("*** Testing equals() to new Pawn() ***");
-		System.out.println(p.equals(newPawn));
+		System.out.println(piece.equals(newPawn));
 		
 		Pawn promotedPawn=new Pawn();
 		promotedPawn.promote(new Queen());
 		System.out.println("*** Testing equals() to promoted Pawn() ***");
-		System.out.println(p.equals(promotedPawn));
+		System.out.println(piece.equals(promotedPawn));
 
-		System.out.println("*** Trying to promote a Pawn to this piece ("+p.toString()+") ***");
-		newPawn.promote(p);
+		System.out.println("*** Trying to promote a Pawn to this piece ("+piece.toString()+") ***");
+		newPawn.promote(piece);
 		System.out.println(newPawn);
 		
 		System.out.println("*** Trying to promote a previously promoted Pawn to this piece ***");
-		promotedPawn.promote(p);
+		promotedPawn.promote(piece);
 		System.out.println(promotedPawn);
 	}
 	
